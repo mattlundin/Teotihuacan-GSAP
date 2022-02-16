@@ -1,18 +1,18 @@
-let tl = gsap.timeline({ defaults: { duration: 1 } });
+let tl = gsap.timeline({ defaults: { opacity: 0, duration: 1 } });
 
 //* HOME PAGE
-tl.from('.home', { opacity: 0, duration: 1.3 })
-	.from('nav', { y: -100, opacity: 0, duration: 0.5, ease: 'power3.out' })
-	.from('.nav-list', { x: -950, opacity: 0, ease: 'back', duration: 1.5 })
+tl.from('.home', { duration: 1.3 })
+	.from('nav', { y: -100, duration: 0.5, ease: 'power3.out' })
+	.from('.nav-list', { x: -950, ease: 'back', duration: 1.5 })
 	.from(
 		'.first-header h1',
 		{ scale: 0, duration: 1.8, ease: 'slow.out' },
 		'-=.5'
 	)
-	.from('.card:nth-child(1)', { rotate: 360, x: 1000 }, '-=1.2')
-	.from('.card:nth-child(3)', { rotate: 360, x: -1000 }, '-=1.2')
-	.from('.card:nth-child(2)', { y: 100, opacity: 0 }, '-=1.2')
-	.from('.card:nth-child(2) p', { opacity: 0, duration: 2.5 }, '-=1.5');
+	.from('.card:nth-child(1)', { rotate: 360, x: 1200 }, '-=1.2')
+	.from('.card:nth-child(3)', { rotate: 360, x: -1200 }, '-=1.2')
+	.from('.card:nth-child(2)', { y: 100 }, '-=1.2')
+	.from('.card:nth-child(2) p', { duration: 2.5 }, '-=1.5');
 
 //* Cards
 gsap.set('.card', {
