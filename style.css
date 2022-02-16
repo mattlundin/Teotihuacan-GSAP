@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Aclonica&family=Comfortaa:wght@400;700&display=swap');
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	font-family: 'Comfortaa', sans-serif;
+	background-color: #000;
+	color: #fff;
+	overflow: hidden;
+}
+
+nav {
+	position: fixed;
+	display: flex;
+	align-items: center;
+	height: 80px;
+	width: 100%;
+	background-color: rgba(0, 0, 0, 0.322);
+	z-index: 1;
+}
+
+.nav-list {
+	display: flex;
+	justify-content: space-around;
+	width: 100%;
+	list-style-type: none;
+}
+
+.nav-list li {
+	padding: 10px 20px;
+	font-size: 1.5rem;
+	font-weight: 700;
+	border-radius: 15px;
+	cursor: pointer;
+	transition: all 0.5s ease-in-out;
+}
+
+.nav-list li:hover {
+	background-color: rgba(0, 0, 0, 0.383);
+	transition: 0.5s ease-in-out;
+}
+
+.wrapper {
+	display: flex;
+	flex-direction: row;
+}
+
+section {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+	width: 100vw;
+	padding-top: 80px;
+}
+
+.home {
+	width: 100vw;
+	background-image: url('https://www.ancient-code.com/wp-content/uploads/2013/02/Teotihuacan-Mexico.jpg');
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.first-header h1 {
+	text-align: center;
+	margin-top: 2rem;
+	font-family: 'Aclonica', sans-serif;
+	font-size: 3.5rem;
+	text-shadow: 0 2px 9px #000;
+}
+
+.row {
+	display: flex;
+	align-items: flex-end;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	height: 100%;
+	width: 100%;
+	margin-bottom: 5%;
+}
+
+.card {
+	position: relative;
+	height: 320px;
+	width: 240px;
+	cursor: pointer;
+}
+
+.card-front,
+.card-back {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	border-radius: 5px;
+	box-shadow: 0 10px 30px #fff;
+	backface-visibility: hidden;
+	-webkit-backface-visibility: hidden;
+}
+
+.front1 {
+	background-image: url('https://i.pinimg.com/originals/70/c7/ea/70c7ea5bdc3ac140ba90887b862e90ff.jpg');
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	opacity: 0.8;
+}
+.front2 {
+	background-image: url('https://i.pinimg.com/originals/57/48/82/57488287609d2aa71e870a1085032f09.jpg');
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	opacity: 0.8;
+}
+.front3 {
+	background-image: url('https://i.pinimg.com/originals/5e/30/6b/5e306b7f2acbf6fc46ecc5213fc9c2c7.jpg');
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	opacity: 0.8;
+}
+
+.card-back {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	height: 100%;
+	width: 100%;
+	padding: 0 5px;
+	background-color: rgba(0, 0, 0, 0.685);
+}
+
+.card-back h3 {
+	height: 10%;
+	margin: 1rem 0;
+	font-size: 2rem;
+}
+
+.card-back p {
+	height: 100%;
+	top: 0;
+	align-items: flex-start;
+}
+
+@media (max-width: 780px) {
+	.row {
+		justify-content: center;
+	}
+
+	.card {
+		margin: 5px;
+		max-height: 320px;
+		max-width: 240px;
+	}
+}
+@media (max-width: 520px) {
+	body {
+		overflow: scroll;
+	}
+	section {
+		height: 100%;
+	}
+}
